@@ -181,7 +181,8 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {};
+        var drugList = {drug5: "Codeine phosphate & Guaifenesin 10mg/100mg solution",
+                    drug8: "Alprazolam 0.5mg"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

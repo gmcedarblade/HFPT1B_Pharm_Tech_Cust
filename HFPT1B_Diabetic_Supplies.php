@@ -181,7 +181,7 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {drug9: "Glipizide & Metformin"};
+        var drugList = {drug5: "Glipizide ER 10mg"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

@@ -181,7 +181,7 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {};
+        var drugList = {drug1: "Compazine 25mg suppository"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

@@ -181,7 +181,7 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {drug4: "Spironolactone"};
+        var drugList = {drug8: "Spironolactone & Hydrochlorothiazide 25 mg"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

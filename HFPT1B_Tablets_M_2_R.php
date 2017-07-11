@@ -181,7 +181,7 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {drug5:"Nitroglycerin"};
+        var drugList = {drug3:"Prednisone 5 mg"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

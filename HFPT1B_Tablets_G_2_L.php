@@ -181,8 +181,8 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {drug3: "Levothyroxine Sodium",
-            drug11:"Lisinopril"};
+        var drugList = {drug14: "Levothyroxine Sodium 25 mcg",
+            drug15:"Lopressor 50 mg"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

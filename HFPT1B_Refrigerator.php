@@ -181,8 +181,7 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {drug4: "Aspirin",
-            drug11: "Viroptic"};
+        var drugList = {drug2: "Lantus 100 units/ml 10 ml vials"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

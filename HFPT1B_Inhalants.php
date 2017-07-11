@@ -181,9 +181,9 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {drug8: "Albuterol Sulfate",
-                drug11: "Spiriva",
-                drug14: "Pulmicort"};
+        var drugList = {drug1: "Budesonide 0.25mg/2ml",
+                drug4: "Albuterol Sulfate 2.5 mg/3 ml",
+                drug7: "Spiriva 18 mcg"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

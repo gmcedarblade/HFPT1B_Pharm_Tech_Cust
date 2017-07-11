@@ -181,7 +181,7 @@ session_start();
 
         var activeList = map.querySelectorAll('[data-overlay-on="true"]');
 
-        var drugList = {};
+        var drugList = {drug6: "Nitroglycerin 0.2 mg/hr"};
 
         var drugListCount = (Object.keys(drugList)).length;
 

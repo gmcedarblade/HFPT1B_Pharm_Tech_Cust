@@ -183,8 +183,7 @@ session_start();
 
         var drugList = {drug8:"Atorvastatin",
             drug9:"Coumadin",
-            drug10:"Diltiazem ER",
-            drug5:"Carbidopa & Levodopa ER"};
+            drug14:"Diltiazem ER 180 MG"};
 
         var drugListCount = (Object.keys(drugList)).length;
 
