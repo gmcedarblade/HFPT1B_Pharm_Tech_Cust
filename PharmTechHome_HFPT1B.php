@@ -192,31 +192,58 @@ if (isset($_SESSION['savedDrugs'])){
 
     var lockedShelf = document.querySelectorAll(".locked");
 
+    ARIS.ready = function() {
+
     for (var i = 0; i < lockedShelf.length; i++) {
 
         lockedShelf[i].addEventListener("click", function(e) {
 
+            e.preventDefault();
+
             var element = this;
 
-            setTimeout(function(){
-                element.style.background = "none";
-            }, 4000);
+            var permissionID = ARIS.cache.idForItemName('Permission');
+            var permission = ARIS.cache.getPlayerItemCount(permissionID);
 
-            $confirmationPopOver = $('<div></div>');
-            $('body').append($confirmationPopOver);
-            $confirmationPopOver.text("Only the Pharmacist has access to the controlled substances safe.");
-            $confirmationPopOver.width(625).height(80).css({
-                backgroundColor: "white",
-                position: "absolute",
-                left: "170px",
-                top: "525px",
-                fontSize: "38px",
-                padding: "20px",
-                textAlign: "center"
-            }).hide().fadeIn(1500).delay(2000).fadeOut(3000);
+            if(permission == 1){
 
+                $permissionPopOver = $('<div></div>');
+                $('body').append($permissionPopOver);
+                $permissionPopOver.text("You have been granted access to the controlled substances safe.");
+                $permissionPopOver.width(625).height(80).css({
+                    backgroundColor: "white",
+                    position: "absolute",
+                    left: "170px",
+                    top: "525px",
+                    fontSize: "38px",
+                    padding: "20px",
+                    textAlign: "center"
+                }).hide().fadeIn(1500).delay(2000).fadeOut(3000, function(){
+                    window.location.href = "https://www.wisc-online.com/ARISE_Files/PharmTechCustomization/HFPT1B/HFPT1B_Narcotic_Safe.php";
+                });
 
-            e.preventDefault();
+            } else {
+
+                setTimeout(function(){
+                    element.style.background = "none";
+                }, 4000);
+
+                $permissionPopOver = $('<div></div>');
+                $('body').append($permissionPopOver);
+                $permissionPopOver.text("You do not have access to the controlled substances safe.");
+                $permissionPopOver.width(625).height(80).css({
+                    backgroundColor: "#850537",
+                    color: "white",
+                    position: "absolute",
+                    left: "170px",
+                    top: "525px",
+                    fontSize: "38px",
+                    padding: "20px",
+                    textAlign: "center"
+                }).hide().fadeIn(1500).delay(2000).fadeOut(3000);
+
+            }
+
 
         }, false);
 
@@ -227,7 +254,7 @@ if (isset($_SESSION['savedDrugs'])){
      can only test in ARIS.
      */
 
-    ARIS.ready = function() {
+
         document.getElementById('verify').onclick = function (e) {
 
             e.preventDefault();
