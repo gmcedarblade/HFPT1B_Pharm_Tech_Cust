@@ -265,7 +265,7 @@ if (isset($_SESSION['savedDrugs'])){
 
             var test = false;
 
-            if (list.a2fTabs == true && list.g2lTabs == true && list.m2rTabs == true && list.s2zTabs == true && list.diabeticSupplies == true && list.refrigerator == true && list.inhalants == true) {
+            if (list.a2fTabs == true && list.g2lTabs == true && list.m2rTabs == true && list.s2zTabs == true && list.narcoticSafe == true && list.diabeticSupplies == true && list.refrigerator == true && list.topicals == true && list.suppositories == true && list.inhalants == true && list.patches == true) {
                 test = true;
             }
 
